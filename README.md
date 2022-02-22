@@ -1,2 +1,2 @@
 # Python-Practice-Projects
-From Al  Sweigart's "The Big book of small python projects"
+From Al  Sweigart's "The Big Book of Small Python Projects"
