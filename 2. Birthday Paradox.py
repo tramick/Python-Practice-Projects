@@ -1,10 +1,10 @@
 """Birthday Paradox Simulaton, by Thomas Amick
 Adapted from a program written by Al Swiegart"""
 
+
+
+
 import datetime, random
-
-
-
 
 
 def getBirthdays(numberOfBirthdays):
@@ -29,10 +29,10 @@ def getMatch(birthdays):
 
 
 
-        for a, birthdayA in enumberate(birthdays):
-            for b, birthdayB in enumerate(birthdays[a + 1 :]):
-                if birthdayA == birthdayB:
-                    return birthdayA
+    for a, birthdayA in enumerate(birthdays):
+        for b, birthdayB in enumerate(birthdays[a + 1 :]):
+            if birthdayA == birthdayB:
+                return birthdayA
 
 
 # Display the intro:
@@ -47,8 +47,7 @@ This program does a Monte Carlo simulation (that is, repeated random simulations
 
 
 #Set up a tuple of month names in order:
-MONTHS = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+MONTHS = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
 
 while True: #keep asking until the user enters a valid amount.
     print('How many birthdays shall I generate? (Max 100)')
@@ -62,7 +61,7 @@ print()
 print('Here are', numBDays, 'birthdays:')
 birthdays = getBirthdays(numBDays)
 for i, birthday in enumerate(birthdays):
-    if i!= 0:
+    if i != 0:
         # Display a comma for each birthday after the first birthday.
         print(', ', end='')
     monthName = MONTHS[birthday.month - 1]
